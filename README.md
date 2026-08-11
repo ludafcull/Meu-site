@@ -1,28 +1,29 @@
-# LUDA — VISUAL PERSONAL ARCHIVE
+# LUDA — V3
 
-Versão visual do site pessoal de Luda, preparada para GitHub Pages.
+Versão visual do site pessoal para GitHub Pages.
 
-## Arquivos
+## O que mudou
 
-- `index.html` — estrutura
-- `style.css` — visual, responsividade e animações
-- `script.js` — menu mobile e animações de entrada
-- `assets/hero-visual.svg` — visual principal
-- `assets/ghost-dashboard.svg` — mockup conceitual do Ghost
-- `assets/interests-collage.svg` — colagem visual de interesses
+- Identidade visual própria para LUDA.
+- Menos texto e mais composição visual.
+- Imagens reais usadas como **fundo**, sem transformar os personagens em referência da marca.
+- Ichigo e Michael Kaiser são usados apenas como elementos visuais de fundo.
+- Overlay escuro para manter o texto legível.
+- GHOST continua como projeto separado.
+- Arquivo para projetos e experimentos.
+- Layout responsivo para celular.
+- Animações suaves de entrada.
 
-Os SVGs são locais e originais, então o site não depende de imagens externas.
+## Imagens usadas
 
-## Publicar
+As duas imagens fornecidas foram colocadas diretamente como backgrounds/visuais através dos links RAW do GitHub.
 
-1. Suba todos os arquivos para um repositório.
-2. GitHub → Settings → Pages.
-3. Source: Deploy from a branch.
-4. Branch: `main`, folder `/ (root)`.
-5. Salve e aguarde a publicação.
+## Ghost
 
-## Personalização
+O espaço do Ghost está preparado para receber uma screenshot real do bot/painel. Basta substituir o conteúdo `.ghost-placeholder` por uma imagem.
 
-Os links do GitHub apontam para `https://github.com/ludafcull`.
+## Publicação
 
-Para trocar os visuais, substitua os SVGs em `assets/` mantendo os mesmos nomes ou altere os caminhos no HTML.
+Envie `index.html`, `style.css`, `script.js` e a pasta `assets` para a raiz do repositório `Meu-site`.
+
+Não precisa de Node.js, npm ou build. GitHub Pages consegue servir a versão diretamente.

@@ -1,7 +1,22 @@
-const header=document.querySelector(".header");
-const menu=document.querySelector(".menu");
-menu?.addEventListener("click",()=>{const open=header.classList.toggle("open");menu.setAttribute("aria-expanded",open)});
-document.querySelectorAll("nav a").forEach(a=>a.addEventListener("click",()=>{header.classList.remove("open");menu?.setAttribute("aria-expanded","false")}));
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");obs.unobserve(e.target)}})},{threshold:.12});
-document.querySelectorAll(".reveal").forEach(e=>obs.observe(e));
-document.getElementById("year").textContent=new Date().getFullYear();
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, {threshold: 0.12});
+
+document.querySelectorAll(".section, .interest-card, .archive-item, .ghost-showcase").forEach(el => {
+  el.classList.add("reveal");
+  observer.observe(el);
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", (event) => {
+    const target = document.querySelector(link.getAttribute("href"));
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({behavior:"smooth"});
+  });
+});

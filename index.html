@@ -1,129 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
-<meta name="description" content="Luda — personal archive, projetos, histórias, código e curiosidade.">
-<title>Luda — Personal Archive</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="LUDA — arquivo pessoal de projetos, interesses, experiências e coisas em construção.">
+  <title>LUDA — Personal Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="grain"></div>
+<div class="noise"></div>
 
-<header class="header">
-  <a class="brand" href="#inicio">LUDA<span>.</span></a>
+<header class="topbar">
+  <a class="brand" href="#top">LUDA<span>.</span></a>
   <nav>
-    <a href="#sobre">sobre</a><a href="#universo">universo</a><a href="#ghost">ghost</a><a href="#projetos">projetos</a>
+    <a href="#sobre">sobre</a>
+    <a href="#universo">universo</a>
+    <a href="#ghost">ghost</a>
+    <a href="#arquivo">arquivo</a>
   </nav>
-  <a class="header-github" href="https://github.com/ludafcull" target="_blank" rel="noopener">github ↗</a>
-  <button class="menu" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  <a class="status" href="#arquivo"><i></i> online / building</a>
 </header>
 
-<main id="inicio">
+<main id="top">
+
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-text reveal">
-      <p class="eyebrow">PERSONAL ARCHIVE / 2026</p>
-      <h1>LUDA<span>IS</span><br><em>BUILDING.</em></h1>
-      <p class="hero-desc">Um espaço entre código, histórias, curiosidade e tudo aquilo que ainda estou tentando transformar em alguma coisa.</p>
-      <a class="hero-cta" href="#sobre">entrar no arquivo <b>↓</b></a>
-    </div>
-    <div class="hero-image reveal delay">
-      <img src="assets/hero-visual.svg" alt="Arte abstrata representando identidade e construção">
-      <div class="image-label">01 / IDENTITY</div>
+  <div class="hero-copy">
+    <p class="eyebrow">PERSONAL ARCHIVE / 2026</p>
+    <h1>LUDA<br><em>IS BUILDING.</em></h1>
+    <p class="hero-text">Código, histórias, personagens, mistério e ideias que ainda estão tentando virar alguma coisa.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#arquivo">explorar arquivo <span>↓</span></a>
+      <a class="button ghost" href="#sobre">conhecer Luda</a>
     </div>
   </div>
-  <div class="hero-bottom"><span>São Tomé e Príncipe</span><span>19 — estudante / dev em construção</span><span>scroll ↓</span></div>
+
+  <div class="hero-visual">
+    <div class="image-frame">
+      <img src="https://raw.githubusercontent.com/ludafcull/quiz-imagens/be779d3d962ef96ab24a00df776e0b8d704b5988/Anime/Ichigo.jpg" alt="" aria-hidden="true">
+      <div class="image-overlay"></div>
+      <span class="frame-label">01 / IDENTITY</span>
+      <span class="frame-corner">LUDA.FULL</span>
+    </div>
+    <div class="floating-note">STORIES<br>→ CODE<br>→ CREATION</div>
+  </div>
+
+  <div class="scroll-mark">SCROLL <span>↓</span></div>
 </section>
 
-<section class="marquee"><div>ANIME <b>×</b> HQs <b>×</b> MISTÉRIO <b>×</b> CÓDIGO <b>×</b> IDEIAS <b>×</b> ANIME <b>×</b> HQs <b>×</b> MISTÉRIO <b>×</b> CÓDIGO <b>×</b> IDEIAS</div></section>
+<div class="ticker"><span>ANIME</span> × <span>HQs</span> × <span>MISTÉRIO</span> × <span>CÓDIGO</span> × <span>IDEIAS</span> × <span>ANIME</span> × <span>HQs</span> × <span>MISTÉRIO</span> × <span>CÓDIGO</span></div>
 
-<section class="section about" id="sobre">
-  <div class="section-head reveal"><span>01 / SOBRE</span><i></i></div>
-  <div class="about-layout">
-    <div class="about-title reveal"><h2>Não é um<br><span>currículo.</span></h2></div>
-    <div class="about-copy reveal delay">
-      <p class="lead">É um registro de quem estou me tornando enquanto tento descobrir o que consigo construir.</p>
-      <p>Eu gosto de histórias que deixam alguma coisa depois que terminam. Anime, mangá, HQs, suspense, mistério, personagens e universos complexos. A programação entrou nesse mesmo espaço: a vontade de entender como as coisas funcionam e, depois, tentar fazer alguma coisa funcionar pelas minhas próprias mãos.</p>
-      <div class="quote">“Ainda não tenho tudo pronto. Talvez essa seja justamente a parte interessante.”</div>
+<section class="about section" id="sobre">
+  <div class="section-index">01 / SOBRE</div>
+  <div class="about-grid">
+    <div><p class="display">Não é um<br><strong>currículo.</strong></p></div>
+    <div class="body-copy">
+      <p>É um registro de quem estou me tornando enquanto tento descobrir o que consigo construir.</p>
+      <p>Eu gosto de histórias que deixam alguma coisa depois que terminam. Anime, mangá, HQs, suspense, mistério, personagens e universos complexos.</p>
+      <p>A programação entrou nesse mesmo espaço: entender como as coisas funcionam e, depois, tentar fazer alguma coisa funcionar pelas minhas próprias mãos.</p>
+      <blockquote>“Ainda não tenho tudo pronto. Talvez essa seja justamente a parte interessante.”</blockquote>
     </div>
   </div>
 </section>
 
-<section class="image-section" id="universo">
-  <div class="full-image"><img src="assets/interests-collage.svg" alt="Colagem abstrata inspirada em manga, quadrinhos e mistério"></div>
-  <div class="image-caption"><span>02 / UNIVERSO</span><strong>Ficção também faz parte de quem eu sou.</strong><small>anime · mangá · HQ · suspense · mistério</small></div>
-</section>
+<section class="universe section" id="universo">
+  <div class="section-head">
+    <div class="section-index">02 / UNIVERSO</div>
+    <h2>O que prende<br><em>minha atenção.</em></h2>
+  </div>
 
-<section class="section interests">
-  <div class="section-head reveal"><span>03 / INTERESSES</span><i></i><small>o que costuma prender minha atenção</small></div>
   <div class="interest-grid">
-    <article class="interest-card tall reveal"><span>01</span><div><small>STORIES</small><h3>Anime<br>&amp; Mangá</h3><p>Mundos, personagens, batalhas, relações e histórias que continuam comigo.</p></div></article>
-    <article class="interest-card reveal delay"><span>02</span><div><small>COMICS</small><h3>HQs</h3><p>Marvel, DC e o prazer de acompanhar universos enormes.</p></div></article>
-    <article class="interest-card dark reveal delay-2"><span>03</span><div><small>ATMOSPHERE</small><h3>Suspense<br>&amp; Mistério</h3><p>Quanto menos óbvia a resposta, mais interessante fica.</p></div></article>
-    <article class="interest-card red reveal"><span>04</span><div><small>CREATION</small><h3>Código</h3><p>Uma ideia vira interface, sistema, bot ou simplesmente um experimento.</p></div></article>
+    <article class="interest-card tall">
+      <img src="https://raw.githubusercontent.com/ludafcull/quiz-imagens/be779d3d962ef96ab24a00df776e0b8d704b5988/Anime/Ichigo.jpg" alt="" aria-hidden="true">
+      <div class="shade"></div>
+      <div class="card-meta">01 / STORIES</div>
+      <div class="card-content"><h3>Anime<br>& Mangá</h3><p>Mundos, personagens, batalhas e histórias que continuam comigo.</p></div>
+    </article>
+
+    <article class="interest-card">
+      <img src="https://raw.githubusercontent.com/ludafcull/quiz-imagens/be779d3d962ef96ab24a00df776e0b8d704b5988/Anime/Michael%20Kaiser.jpg" alt="" aria-hidden="true">
+      <div class="shade"></div>
+      <div class="card-meta">02 / COMICS</div>
+      <div class="card-content"><h3>HQs</h3><p>Universos enormes, personagens e histórias para explorar.</p></div>
+    </article>
+
+    <article class="interest-card">
+      <div class="mystery-bg"></div>
+      <div class="shade"></div>
+      <div class="card-meta">03 / ATMOSPHERE</div>
+      <div class="card-content"><h3>Suspense<br>& Mistério</h3><p>Quanto menos óbvia a resposta, mais interessante fica.</p></div>
+    </article>
+
+    <article class="interest-card code-card">
+      <div class="code-lines">
+        <div><b>01</b> <span>const</span> curiosity = true;</div>
+        <div><b>02</b> <span>while</span> (learning) {</div>
+        <div><b>03</b>&nbsp;&nbsp;build();</div>
+        <div><b>04</b>&nbsp;&nbsp;break();</div>
+        <div><b>05</b>&nbsp;&nbsp;tryAgain();</div>
+        <div><b>06</b>}</div>
+      </div>
+      <div class="card-meta">04 / CREATION</div>
+      <div class="card-content"><h3>Código</h3><p>Uma ideia vira interface, sistema, bot ou experimento.</p></div>
+    </article>
   </div>
 </section>
 
-<section class="section ghost" id="ghost">
-  <div class="section-head reveal"><span>04 / FEATURED PROJECT</span><i></i><small>o laboratório</small></div>
+<section class="ghost section" id="ghost">
+  <div class="section-index">03 / FEATURED PROJECT</div>
   <div class="ghost-intro">
-    <div class="reveal"><p class="project-type">BOT / AUTOMATION / EXPERIMENTS</p><h2>GHOST<span>.</span></h2><p>Um projeto que nasceu para aprender fazendo. Comandos, memória, atividades, quizzes, banco de dados e tudo aquilo que aparece quando uma ideia começa a ficar maior.</p></div>
-    <div class="ghost-stats reveal delay"><div><b>01</b><small>projeto</small></div><div><b>∞</b><small>experimentos</small></div><div><b>JS</b><small>stack principal</small></div></div>
+    <div>
+      <p class="eyebrow">BOT / AUTOMATION / EXPERIMENTS</p>
+      <h2>GHOST<span>.</span></h2>
+    </div>
+    <p>Um projeto que nasceu para aprender fazendo. Comandos, memória, atividades, quizzes, banco de dados e tudo aquilo que aparece quando uma ideia começa a ficar maior.</p>
   </div>
-  <div class="dashboard reveal"><img src="assets/ghost-dashboard.svg" alt="Mockup conceitual do painel do Ghost"><span>GHOST / CONCEPTUAL INTERFACE</span></div>
-  <div class="tech"><span>JavaScript</span><span>Node.js</span><span>MongoDB</span><span>SQLite</span><span>Facebook Bot</span></div>
-</section>
 
-<section class="section projects" id="projetos">
-  <div class="section-head reveal"><span>05 / PROJECTS</span><i></i></div>
-  <div class="projects-title reveal"><h2>Pequenas coisas.<br><span>Grandes tentativas.</span></h2><p>Nem tudo aqui precisa ser perfeito. Precisa existir o suficiente para me ensinar alguma coisa.</p></div>
-  <div class="project-rows">
-    <a class="project-row reveal" href="https://github.com/ludafcull" target="_blank" rel="noopener"><b>01</b><div><small>BOT</small><h3>Ghost</h3></div><span>↗</span></a>
-    <a class="project-row reveal" href="https://github.com/ludafcull" target="_blank" rel="noopener"><b>02</b><div><small>WEB</small><h3>Interfaces &amp; Experimentos</h3></div><span>↗</span></a>
-    <a class="project-row reveal" href="https://github.com/ludafcull" target="_blank" rel="noopener"><b>03</b><div><small>INTERACTIVE</small><h3>Quizzes &amp; Atividades</h3></div><span>↗</span></a>
-    <div class="project-row muted reveal"><b>04</b><div><small>UNKNOWN</small><h3>Próxima ideia</h3></div><span>?</span></div>
-  </div>
-</section>
-
-<section class="statement">
-  <div class="statement-bg"></div>
-  <div class="statement-content reveal"><small>06 / PERSONAL NOTE</small><h2>Eu ainda estou<br><em>construindo</em> o mapa.</h2><p>Mas já comecei a andar.</p></div>
-</section>
-
-<section class="section process">
-  <div class="section-head reveal"><span>07 / PROCESS</span><i></i><small>como eu aprendo</small></div>
-  <div class="process-grid">
-    <div class="process-big reveal"><span>01</span><h3>Curiosidade<br>→ tentativa<br>→ erro<br>→ descoberta.</h3></div>
-    <div class="steps">
-      <div class="step reveal"><b>01</b><div><h4>Imaginar</h4><p>Uma ideia aparece antes de existir qualquer código.</p></div></div>
-      <div class="step reveal"><b>02</b><div><h4>Começar</h4><p>Mesmo sem dominar tudo, alguma coisa precisa sair do lugar.</p></div></div>
-      <div class="step reveal"><b>03</b><div><h4>Quebrar</h4><p>Erros mostram partes do sistema que eu ainda não entendi.</p></div></div>
-      <div class="step reveal"><b>04</b><div><h4>Entender</h4><p>A melhor parte é quando o problema deixa de ser um mistério.</p></div></div>
-      <div class="step reveal"><b>05</b><div><h4>Recomeçar melhor</h4><p>O próximo projeto sempre leva alguma coisa do anterior.</p></div></div>
+  <div class="ghost-showcase">
+    <div class="ghost-image">
+      <div class="ghost-placeholder">
+        <span>GHOST</span>
+        <small>COLOQUE AQUI UM SCREENSHOT REAL DO BOT</small>
+      </div>
+      <div class="live-badge"><i></i> PROJECT / GHOST</div>
+    </div>
+    <div class="ghost-side">
+      <div class="stat"><strong>01</strong><span>projeto principal</span></div>
+      <div class="stat"><strong>∞</strong><span>experimentos</span></div>
+      <div class="stat"><strong>JS</strong><span>stack principal</span></div>
+      <div class="techs"><span>JavaScript</span><span>Node.js</span><span>MongoDB</span><span>SQLite</span><span>Facebook Bot</span></div>
+      <a class="button primary wide" href="https://github.com/ludafcull" target="_blank" rel="noopener">ver no GitHub ↗</a>
     </div>
   </div>
 </section>
 
-<section class="contact">
-  <div class="contact-inner reveal">
-    <small>08 / END OF PAGE</small>
-    <h2>Se chegou até aqui,<br><span>você já entrou.</span></h2>
-    <div class="contact-links"><a href="https://github.com/ludafcull" target="_blank" rel="noopener">GitHub ↗</a><a href="#inicio">voltar ao topo ↑</a></div>
+<section class="archive section" id="arquivo">
+  <div class="section-head archive-head">
+    <div class="section-index">04 / ARQUIVO</div>
+    <div>
+      <h2>Coisas que<br><em>existem.</em></h2>
+      <p>Projetos, experimentos, imagens, ideias e tentativas. O arquivo não precisa estar perfeito para ser importante.</p>
+    </div>
+  </div>
+
+  <div class="archive-grid">
+    <a class="archive-item large" href="https://github.com/ludafcull" target="_blank" rel="noopener">
+      <div class="archive-image"><div class="archive-placeholder">GHOST / PROJECT</div></div>
+      <div class="archive-info"><span>01 / BOT</span><h3>Ghost</h3><b>↗</b></div>
+    </a>
+    <a class="archive-item" href="https://github.com/ludafcull" target="_blank" rel="noopener">
+      <div class="archive-image"><div class="archive-placeholder">WEB / EXPERIMENT</div></div>
+      <div class="archive-info"><span>02 / WEB</span><h3>Interfaces</h3><b>↗</b></div>
+    </a>
+    <a class="archive-item" href="https://github.com/ludafcull" target="_blank" rel="noopener">
+      <div class="archive-image"><div class="archive-placeholder">QUIZ / ACTIVITY</div></div>
+      <div class="archive-info"><span>03 / INTERACTIVE</span><h3>Quizzes</h3><b>↗</b></div>
+    </a>
+    <div class="archive-item unknown">
+      <div class="unknown-mark">?</div>
+      <div class="archive-info"><span>04 / UNKNOWN</span><h3>Próxima ideia</h3><b>+</b></div>
+    </div>
   </div>
 </section>
+
+<section class="process section">
+  <div class="section-index">05 / PROCESS</div>
+  <div class="process-wrap">
+    <h2>Curiosidade<br>→ tentativa<br>→ erro<br>→ descoberta.</h2>
+    <div class="process-list">
+      <div><b>01</b><h3>Imaginar</h3><p>Uma ideia aparece antes de existir qualquer código.</p></div>
+      <div><b>02</b><h3>Começar</h3><p>Mesmo sem dominar tudo, alguma coisa precisa sair do lugar.</p></div>
+      <div><b>03</b><h3>Quebrar</h3><p>Erros mostram partes do sistema que eu ainda não entendi.</p></div>
+      <div><b>04</b><h3>Entender</h3><p>A melhor parte é quando o problema deixa de ser um mistério.</p></div>
+      <div><b>05</b><h3>Recomeçar melhor</h3><p>O próximo projeto sempre leva alguma coisa do anterior.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="end">
+  <p>END OF PAGE</p>
+  <h2>Se chegou até aqui,<br><em>você já entrou.</em></h2>
+  <a href="#top">voltar ao topo ↑</a>
+</section>
+
 </main>
 
 <footer>
-  <div class="footer-brand">luda<span>.</span></div>
-  <div class="footer-info">PERSONAL ARCHIVE / 2026<br>MADE WHILE LEARNING.</div>
-  <div class="footer-bottom"><span>© <span id="year"></span> Luda</span><span>em construção.</span></div>
+  <div><strong>luda.</strong><span>PERSONAL ARCHIVE / 2026</span></div>
+  <div><span>MADE WHILE LEARNING.</span><span>© Luda em construção.</span></div>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
