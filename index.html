@@ -3,235 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ludafcull</title>
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Luda — personal archive, projetos, histórias, código e curiosidade.">
+<title>Luda — Personal Archive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #f4f1ea;
-    --ink: #161513;
-    --red: #d1362f;
-    --grey: #8a857a;
-    --line: #161513;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-    background-image:
-      radial-gradient(circle, rgba(22,21,19,0.08) 1px, transparent 1px);
-    background-size: 14px 14px;
-  }
-
-  .display {
-    font-family: 'Anton', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-  }
-
-  /* ===== HERO ===== */
-  .hero {
-    position: relative;
-    padding: 4.5rem 1.5rem 3rem;
-    background: var(--ink);
-    color: var(--paper);
-    overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle, rgba(244,241,234,0.15) 1.5px, transparent 1.5px);
-    background-size: 10px 10px;
-    opacity: 0.5;
-    pointer-events: none;
-  }
-
-  .eyebrow {
-    display: inline-block;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    border: 2px solid var(--red);
-    color: var(--red);
-    background: var(--paper);
-    padding: 0.2rem 0.6rem;
-    transform: rotate(-3deg);
-    margin-bottom: 1.2rem;
-    font-weight: 700;
-  }
-
-  .hero h1 {
-    font-size: 3.2rem;
-    line-height: 0.95;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero h1 span {
-    color: var(--red);
-    -webkit-text-stroke: 1.5px var(--paper);
-  }
-
-  .hero p.sub {
-    margin-top: 1rem;
-    max-width: 32ch;
-    color: #d8d4c8;
-    font-size: 0.95rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* ===== PANEL SYSTEM ===== */
-  .panel {
-    border: 3px solid var(--line);
-    background: var(--paper);
-    margin: 1.4rem 1rem;
-    padding: 1.6rem 1.3rem;
-    position: relative;
-  }
-
-  .panel-tab {
-    position: absolute;
-    top: -14px;
-    left: 16px;
-    background: var(--ink);
-    color: var(--paper);
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    padding: 0.25rem 0.6rem;
-    font-weight: 700;
-  }
-
-  .panel h2 {
-    font-size: 1.5rem;
-    margin-top: 0.3rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .panel p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #3a3733;
-  }
-
-  .panel p + p { margin-top: 0.7rem; }
-
-  /* speech bubble quote */
-  .bubble {
-    position: relative;
-    background: #fff;
-    border: 3px solid var(--line);
-    border-radius: 18px;
-    padding: 1.1rem 1.2rem;
-    margin: 1.4rem 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  .bubble::after {
-    content: "";
-    position: absolute;
-    left: 30px;
-    bottom: -16px;
-    width: 0; height: 0;
-    border: 12px solid transparent;
-    border-top-color: #fff;
-    border-bottom: 0;
-    filter: drop-shadow(0 3px 0 var(--line));
-  }
-
-  /* ===== TAG LIST (interesses) ===== */
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.9rem;
-  }
-
-  .tag {
-    border: 2px solid var(--ink);
-    padding: 0.3rem 0.7rem;
-    font-size: 0.8rem;
-    font-weight: 700;
-    background: var(--paper);
-  }
-
-  .tag.red { background: var(--red); color: var(--paper); border-color: var(--red); }
-
-  /* ===== FOOTER ===== */
-  footer {
-    margin-top: 2.5rem;
-    padding: 2rem 1.5rem 3rem;
-    text-align: center;
-  }
-
-  footer .display {
-    font-size: 1.1rem;
-    color: var(--grey);
-  }
-
-  footer a {
-    color: var(--red);
-    text-decoration: none;
-    font-weight: 700;
-  }
-
-  @media (min-width: 640px) {
-    .hero h1 { font-size: 4.5rem; }
-    .panel { margin-left: 2rem; margin-right: 2rem; }
-    .bubble { margin-left: 2rem; margin-right: 2rem; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="grain"></div>
 
-  <section class="hero">
-    <span class="eyebrow">1ª página</span>
-    <h1 class="display">ludafcull<br><span>em construção</span></h1>
-    <p class="sub">Dev iniciante, fã de anime e mangá — montando esse cantinho aos poucos.</p>
-  </section>
+<header class="header">
+  <a class="brand" href="#inicio">LUDA<span>.</span></a>
+  <nav>
+    <a href="#sobre">sobre</a><a href="#universo">universo</a><a href="#ghost">ghost</a><a href="#projetos">projetos</a>
+  </nav>
+  <a class="header-github" href="https://github.com/ludafcull" target="_blank" rel="noopener">github ↗</a>
+  <button class="menu" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+</header>
 
-  <div class="bubble">
-    Oi! Eu sou o Luda. Curto anime, leio HQ, e tô aprendendo a programar mexendo em bot pra Facebook. Esse site é meu primeiro projeto puramente meu.
-  </div>
-
-  <div class="panel">
-    <span class="panel-tab">SOBRE MIM</span>
-    <h2 class="display">quem eu sou</h2>
-    <p>19 anos, de São Tomé e Príncipe. Grande fã de animes e mangás — tenho sempre alguma série rolando e uma pilha de HQ pra ler.</p>
-    <p>Tô aprendendo a desenvolver, começando pelos meus próprios projetos: um bot pra Facebook e um painel web pra gerenciar ele. Esse site é o próximo passo dessa jornada.</p>
-  </div>
-
-  <div class="panel">
-    <span class="panel-tab">INTERESSES</span>
-    <h2 class="display">o que eu curto</h2>
-    <div class="tags">
-      <span class="tag red">Anime</span>
-      <span class="tag">Mangá</span>
-      <span class="tag">HQs</span>
-      <span class="tag">Programação</span>
-      <span class="tag">Bots</span>
+<main id="inicio">
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text reveal">
+      <p class="eyebrow">PERSONAL ARCHIVE / 2026</p>
+      <h1>LUDA<span>IS</span><br><em>BUILDING.</em></h1>
+      <p class="hero-desc">Um espaço entre código, histórias, curiosidade e tudo aquilo que ainda estou tentando transformar em alguma coisa.</p>
+      <a class="hero-cta" href="#sobre">entrar no arquivo <b>↓</b></a>
+    </div>
+    <div class="hero-image reveal delay">
+      <img src="assets/hero-visual.svg" alt="Arte abstrata representando identidade e construção">
+      <div class="image-label">01 / IDENTITY</div>
     </div>
   </div>
+  <div class="hero-bottom"><span>São Tomé e Príncipe</span><span>19 — estudante / dev em construção</span><span>scroll ↓</span></div>
+</section>
 
-  <div class="panel">
-    <span class="panel-tab">PROJETOS</span>
-    <h2 class="display">no que ando mexendo</h2>
-    <p>Bot pra Facebook com comandos próprios, e um painel web pra gerenciar ele — os dois no meu GitHub.</p>
+<section class="marquee"><div>ANIME <b>×</b> HQs <b>×</b> MISTÉRIO <b>×</b> CÓDIGO <b>×</b> IDEIAS <b>×</b> ANIME <b>×</b> HQs <b>×</b> MISTÉRIO <b>×</b> CÓDIGO <b>×</b> IDEIAS</div></section>
+
+<section class="section about" id="sobre">
+  <div class="section-head reveal"><span>01 / SOBRE</span><i></i></div>
+  <div class="about-layout">
+    <div class="about-title reveal"><h2>Não é um<br><span>currículo.</span></h2></div>
+    <div class="about-copy reveal delay">
+      <p class="lead">É um registro de quem estou me tornando enquanto tento descobrir o que consigo construir.</p>
+      <p>Eu gosto de histórias que deixam alguma coisa depois que terminam. Anime, mangá, HQs, suspense, mistério, personagens e universos complexos. A programação entrou nesse mesmo espaço: a vontade de entender como as coisas funcionam e, depois, tentar fazer alguma coisa funcionar pelas minhas próprias mãos.</p>
+      <div class="quote">“Ainda não tenho tudo pronto. Talvez essa seja justamente a parte interessante.”</div>
+    </div>
   </div>
+</section>
 
-  <footer>
-    <p class="display">continua...</p>
-    <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--grey);">
-      feito por <a href="https://github.com/ludafcull" target="_blank">@ludafcull</a>
-    </p>
-  </footer>
+<section class="image-section" id="universo">
+  <div class="full-image"><img src="assets/interests-collage.svg" alt="Colagem abstrata inspirada em manga, quadrinhos e mistério"></div>
+  <div class="image-caption"><span>02 / UNIVERSO</span><strong>Ficção também faz parte de quem eu sou.</strong><small>anime · mangá · HQ · suspense · mistério</small></div>
+</section>
 
+<section class="section interests">
+  <div class="section-head reveal"><span>03 / INTERESSES</span><i></i><small>o que costuma prender minha atenção</small></div>
+  <div class="interest-grid">
+    <article class="interest-card tall reveal"><span>01</span><div><small>STORIES</small><h3>Anime<br>&amp; Mangá</h3><p>Mundos, personagens, batalhas, relações e histórias que continuam comigo.</p></div></article>
+    <article class="interest-card reveal delay"><span>02</span><div><small>COMICS</small><h3>HQs</h3><p>Marvel, DC e o prazer de acompanhar universos enormes.</p></div></article>
+    <article class="interest-card dark reveal delay-2"><span>03</span><div><small>ATMOSPHERE</small><h3>Suspense<br>&amp; Mistério</h3><p>Quanto menos óbvia a resposta, mais interessante fica.</p></div></article>
+    <article class="interest-card red reveal"><span>04</span><div><small>CREATION</small><h3>Código</h3><p>Uma ideia vira interface, sistema, bot ou simplesmente um experimento.</p></div></article>
+  </div>
+</section>
+
+<section class="section ghost" id="ghost">
+  <div class="section-head reveal"><span>04 / FEATURED PROJECT</span><i></i><small>o laboratório</small></div>
+  <div class="ghost-intro">
+    <div class="reveal"><p class="project-type">BOT / AUTOMATION / EXPERIMENTS</p><h2>GHOST<span>.</span></h2><p>Um projeto que nasceu para aprender fazendo. Comandos, memória, atividades, quizzes, banco de dados e tudo aquilo que aparece quando uma ideia começa a ficar maior.</p></div>
+    <div class="ghost-stats reveal delay"><div><b>01</b><small>projeto</small></div><div><b>∞</b><small>experimentos</small></div><div><b>JS</b><small>stack principal</small></div></div>
+  </div>
+  <div class="dashboard reveal"><img src="assets/ghost-dashboard.svg" alt="Mockup conceitual do painel do Ghost"><span>GHOST / CONCEPTUAL INTERFACE</span></div>
+  <div class="tech"><span>JavaScript</span><span>Node.js</span><span>MongoDB</span><span>SQLite</span><span>Facebook Bot</span></div>
+</section>
+
+<section class="section projects" id="projetos">
+  <div class="section-head reveal"><span>05 / PROJECTS</span><i></i></div>
+  <div class="projects-title reveal"><h2>Pequenas coisas.<br><span>Grandes tentativas.</span></h2><p>Nem tudo aqui precisa ser perfeito. Precisa existir o suficiente para me ensinar alguma coisa.</p></div>
+  <div class="project-rows">
+    <a class="project-row reveal" href="https://github.com/ludafcull" target="_blank" rel="noopener"><b>01</b><div><small>BOT</small><h3>Ghost</h3></div><span>↗</span></a>
+    <a class="project-row reveal" href="https://github.com/ludafcull" target="_blank" rel="noopener"><b>02</b><div><small>WEB</small><h3>Interfaces &amp; Experimentos</h3></div><span>↗</span></a>
+    <a class="project-row reveal" href="https://github.com/ludafcull" target="_blank" rel="noopener"><b>03</b><div><small>INTERACTIVE</small><h3>Quizzes &amp; Atividades</h3></div><span>↗</span></a>
+    <div class="project-row muted reveal"><b>04</b><div><small>UNKNOWN</small><h3>Próxima ideia</h3></div><span>?</span></div>
+  </div>
+</section>
+
+<section class="statement">
+  <div class="statement-bg"></div>
+  <div class="statement-content reveal"><small>06 / PERSONAL NOTE</small><h2>Eu ainda estou<br><em>construindo</em> o mapa.</h2><p>Mas já comecei a andar.</p></div>
+</section>
+
+<section class="section process">
+  <div class="section-head reveal"><span>07 / PROCESS</span><i></i><small>como eu aprendo</small></div>
+  <div class="process-grid">
+    <div class="process-big reveal"><span>01</span><h3>Curiosidade<br>→ tentativa<br>→ erro<br>→ descoberta.</h3></div>
+    <div class="steps">
+      <div class="step reveal"><b>01</b><div><h4>Imaginar</h4><p>Uma ideia aparece antes de existir qualquer código.</p></div></div>
+      <div class="step reveal"><b>02</b><div><h4>Começar</h4><p>Mesmo sem dominar tudo, alguma coisa precisa sair do lugar.</p></div></div>
+      <div class="step reveal"><b>03</b><div><h4>Quebrar</h4><p>Erros mostram partes do sistema que eu ainda não entendi.</p></div></div>
+      <div class="step reveal"><b>04</b><div><h4>Entender</h4><p>A melhor parte é quando o problema deixa de ser um mistério.</p></div></div>
+      <div class="step reveal"><b>05</b><div><h4>Recomeçar melhor</h4><p>O próximo projeto sempre leva alguma coisa do anterior.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="contact-inner reveal">
+    <small>08 / END OF PAGE</small>
+    <h2>Se chegou até aqui,<br><span>você já entrou.</span></h2>
+    <div class="contact-links"><a href="https://github.com/ludafcull" target="_blank" rel="noopener">GitHub ↗</a><a href="#inicio">voltar ao topo ↑</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-brand">luda<span>.</span></div>
+  <div class="footer-info">PERSONAL ARCHIVE / 2026<br>MADE WHILE LEARNING.</div>
+  <div class="footer-bottom"><span>© <span id="year"></span> Luda</span><span>em construção.</span></div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
