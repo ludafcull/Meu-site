@@ -1,12 +1,17 @@
 const menu = document.querySelector(".menu");
 const nav = document.querySelector(".bar nav");
 
-menu?.addEventListener("click", () => {
-  nav.classList.toggle("show");
-});
+if (menu && nav) {
+  menu.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
+}
+
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
+
   link.addEventListener("click", (event) => {
+
     const target = document.querySelector(
       link.getAttribute("href")
     );
@@ -21,5 +26,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     });
 
     nav?.classList.remove("show");
+
   });
+
 });
